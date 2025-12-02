@@ -5,9 +5,75 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-  </head>
+    <link rel="stylesheet" href="style.scss">
+</head>
   <body>
-    <div id="app"></div>
+    <div id="app">
+      <header>
+        <div class="logo">PROTOFILO.</div>
+        <nav>
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Works</a>
+            <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+          <div class="hero-left">
+              <h2>HEJ MITT NAMN ÄR</h2>
+              <h1>ADRIAN LYYDÉN</h1>
+              <button class="yellow-span">JAG ÄR EN WEBBUTVECKLARE & DESIGNER</button>
+          </div>
+          <div class="hero-right">
+              <img src="public/img/IMG_4215.png" alt="profile">
+          </div>
+      </section>
+
+      <section class="about">
+          <div class="about-img">
+              <img src="public/img/Bild_mig.JPG">
+          </div>
+          <div class="about-text">
+              <h3>WHO AM I</h3>
+              <h1 class="yellow">HELLO</h1>
+              <p>
+                  I am a UI developer. Det är ett känt faktum att en läsare distraheras
+                  av den läsbara texten när hen tittar på sidans layout. Lorem ipsum 
+                  används eftersom det har en mer eller mindre normal fördelning.
+              </p>
+              <p>
+                  Det är ett känt faktum att en läsare distraheras av innehållet om 
+                  texten är läsbar. Lorem ipsum används därför.
+              </p>
+          </div>
+      </section>
+
+      <section class="work">
+          <h1>MY WORK <span class="yellow-dot">⦿</span></h1>
+          <p class="subtitle">awesome projects</p>
+
+          <div class="categories">
+              <span>WEBDESIGN</span>
+              <span>LJUD & LJUS</span>
+              <span>3D</span>
+              <span>GRFISK DESIGN</span>
+          </div>
+
+          <div class="grid">
+              <img src="public/Grafisk design/GDK-sittningmenu.png">
+
+              <div class="grid-yellow">
+                  <div class="inner">
+                      <h3>DESIGN PROJECT</h3>
+                      <p>Lorem ipsum är inte slumpmässig text – det har rötter.</p>
+                  </div>
+              </div>
+          </div>
+
+          <button class="load-more">LOAD MORE</button>
+      </section>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
