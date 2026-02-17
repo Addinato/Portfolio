@@ -17,6 +17,10 @@ header {
   padding: 25px 80px;
   background: #333;
   color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 header .logo {
   font-size: 22px;
@@ -34,12 +38,19 @@ header nav a.active, header nav a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 0px;
   background: #000;
   color: #fff;
 }
 .hero .hero-left {
-  padding: 120px 80px;
+  grid-area: 1/1/2/4;
+  position: absolute;
+  top: 80%;
+  left: 40%;
+  transform: translate(-50%, -50%);
 }
 .hero .hero-left h2 {
   font-weight: 300;
@@ -58,6 +69,9 @@ header nav a.active, header nav a:hover {
   cursor: pointer;
   font-weight: 600;
   border-radius: 10px;
+}
+.hero .hero-right {
+  grid-area: 1/4/2/7;
 }
 .hero .hero-right img {
   width: 100%;
@@ -142,6 +156,34 @@ header nav a.active, header nav a:hover {
   color: #fff;
   cursor: pointer;
   border-radius: 30px;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.footer-content {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+.footer-content p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+.footer-content a {
+  color: rgb(183, 183, 0);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer-content a:hover {
+  color: yellow;
+  text-decoration: underline;
 }
 
 @media (max-width: 900px) {

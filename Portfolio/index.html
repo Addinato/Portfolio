@@ -5,51 +5,49 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <link rel="stylesheet" href="style.scss">
+    <link rel="stylesheet" href="style.css">
 </head>
   <body>
     <div id="app">
       <header>
-        <div class="logo">PROTOFILO.</div>
+        <div class="logo">PORTFOLIO.</div>
         <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">About</a>
-            <a href="#">Works</a>
-            <a href="#">Contact</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#work">Works</a>
+            <a href="#contact">Contact</a>
         </nav>
       </header>
 
-      <section class="hero">
+      <section class="hero" id="home">
           <div class="hero-left">
-              <h2>HEJ MITT NAMN ÄR</h2>
-              <h1>ADRIAN LYYDÉN</h1>
-              <button class="yellow-span">JAG ÄR EN WEBBUTVECKLARE & DESIGNER</button>
+              <h2>HEJ, MITT NAMN ÄR</h2>
+              <h1>ADRIAN LYDÉN</h1>
+              <button class="yellow-span">JAG ÄR EN FULLSTACK UTVECKLARE & DESIGNER</button>
           </div>
           <div class="hero-right">
               <img src="public/img/IMG_4215.png" alt="profile">
           </div>
       </section>
 
-      <section class="about">
+      <section class="about" id="about">
           <div class="about-img">
               <img src="public/img/Bild_mig.JPG">
           </div>
           <div class="about-text">
-              <h3>WHO AM I</h3>
-              <h1 class="yellow">HELLO</h1>
-              <p>
-                  I am a UI developer. Det är ett känt faktum att en läsare distraheras
-                  av den läsbara texten när hen tittar på sidans layout. Lorem ipsum 
-                  används eftersom det har en mer eller mindre normal fördelning.
-              </p>
-              <p>
-                  Det är ett känt faktum att en läsare distraheras av innehållet om 
-                  texten är läsbar. Lorem ipsum används därför.
-              </p>
+            <h1 class="yellow">VEM ÄR JAG</h1>
+            <p>
+            Jag är en passionerad och nyfiken student med en stark känsla för programering och nya tekniker. Jag studerar för närvarande Webbutveckling inom E-handel på Medieinstitutet och söker LIA-plats där jag kan tillämpa mina kunskaper i bland annat HTML, CSS, Javascript och moderna ramnverk som Next samt arbeta med och Utveckla backend. 
+            </p>
+
+            <p>
+            Jag är en problemlösare som trivs med att arbeta både självständing och i team, och jag ser fram emot att utvecklas vidare inom branchen
+            </p>
+            
           </div>
       </section>
 
-      <section class="work">
+      <section class="work" id="work">
           <h1>MY WORK <span class="yellow-dot">⦿</span></h1>
           <p class="subtitle">awesome projects</p>
 
@@ -61,7 +59,7 @@
           </div>
 
           <div class="grid">
-              <img src="public/Grafisk design/GDK-sittningmenu.png">
+              <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png">
 
               <div class="grid-yellow">
                   <div class="inner">
@@ -73,6 +71,28 @@
 
           <button class="load-more">LOAD MORE</button>
       </section>
+      <footer class="footer" id="contact">
+                <div class="footer-content">
+                    <h2>Kontakta mig</h2>
+
+                    <p>Telefon: +46 73 507 76 70</p>
+                    <p>LinkedIn: 
+                    <a href="https://www.linkedin.com/in/adrianlydén-b9847a29b" target="_blank">
+                    www.linkedin.com/in/adrianlydén-b9847a29b
+                    </a>
+                    </p>
+                    <p>Mejl:
+                    <a href="mailto:adrianlyden@gmail.com">adrianlyden@gmail.com</a> | 
+                    <a href="mailto:Adrian.Lyden@medieinstitutet.se">Adrian.Lyden@medieinstitutet.se</a>
+                    </p>
+                    <p>GitHub: 
+                    <a href="https://github.com/Addinato" target="_blank">
+                    github.com/Addinato
+                    </a>
+                    </p>
+                </div>
+
+      </footer>
     </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
