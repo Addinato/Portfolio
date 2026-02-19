@@ -25,6 +25,12 @@ body {
   color: #222;
 }
 
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 
 // ------------------------------------------------------
 // HEADER
@@ -72,12 +78,13 @@ header {
   grid-row-gap: 0px;
   background: $black;
   color: $white;
+  height: 100vh;
 
   .hero-left {
     grid-area: 1 / 1 / 2 / 4;
     position: absolute;
     top: 80%;
-    left: 40%;
+    left: 35%;
     transform: translate(-50%, -50%);
 
     h2 {
@@ -104,9 +111,9 @@ header {
 
   .hero-right {
     grid-area: 1 / 4 / 2 / 7;
+    height: 100vh;
+
     img {
-      width: 100%;
-      height: 100%;
       object-fit: cover;
     }
   }
@@ -118,15 +125,14 @@ header {
 // ------------------------------------------------------
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  padding: 80px;
+  padding: 10px 80px;
   background: $white;
   align-items: center;
-
-  .about-img img {
-    width: 100%;
-    border-radius: 6px;
+  .about-img {
+      border-radius: 16px;
+      height: 90vh;
   }
 
   .about-text {
@@ -184,18 +190,26 @@ header {
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 1vw;
 
-    img {
+    .work-grid-box{
       width: 100%;
+      height: 400px;
+      img{
+        object-fit: cover;
+      }
+      video{
+        width: 100%;
+        height: 100%;
+      }
     }
-
     .grid-yellow {
       background: $yellow;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      height: 100%;
 
       .inner {
         padding: 20px;

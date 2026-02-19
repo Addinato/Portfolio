@@ -1,99 +1,208 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portfolio</title>
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>portfolio</title>
+
+  <!-- Tailwind CDN (om du inte använder Vite/PostCSS) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Poppins font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            poppins: ['Poppins', 'sans-serif']
+          },
+          colors: {
+            brandYellow: '#f7e41c'
+          }
+        }
+      }
+    }
+  </script>
 </head>
-  <body>
-    <div id="app">
-      <header>
-        <div class="logo">PORTFOLIO.</div>
-        <nav>
-            <a href="#home" class="active">Home</a>
-            <a href="#about">About</a>
-            <a href="#work">Works</a>
-            <a href="#contact">Contact</a>
-        </nav>
-      </header>
 
-      <section class="hero" id="home">
-          <div class="hero-left">
-              <h2>HEJ, MITT NAMN ÄR</h2>
-              <h1>ADRIAN LYDÉN</h1>
-              <button class="yellow-span">JAG ÄR EN FULLSTACK UTVECKLARE & DESIGNER</button>
-          </div>
-          <div class="hero-right">
-              <img src="public/img/IMG_4215.png" alt="profile">
-          </div>
-      </section>
+<body class="m-0 p-0 box-border bg-[#f2f2f2] text-[#222] font-poppins">
 
-      <section class="about" id="about">
-          <div class="about-img">
-              <img src="public/img/Bild_mig.JPG">
-          </div>
-          <div class="about-text">
-            <h1 class="yellow">VEM ÄR JAG</h1>
-            <p>
-            Jag är en passionerad och nyfiken student med en stark känsla för programering och nya tekniker. Jag studerar för närvarande Webbutveckling inom E-handel på Medieinstitutet och söker LIA-plats där jag kan tillämpa mina kunskaper i bland annat HTML, CSS, Javascript och moderna ramnverk som Next samt arbeta med och Utveckla backend. 
-            </p>
+<div id="app">
 
-            <p>
-            Jag är en problemlösare som trivs med att arbeta både självständing och i team, och jag ser fram emot att utvecklas vidare inom branchen
-            </p>
-            
-          </div>
-      </section>
+  <!-- HEADER -->
+  <header class="fixed top-0 w-full z-10 flex justify-between items-center px-20 py-6 bg-[#333] text-white max-md:px-5">
+    <div class="text-[22px] font-bold">PORTFOLIO.</div>
 
-      <section class="work" id="work">
-          <h1>MY WORK <span class="yellow-dot">⦿</span></h1>
-          <p class="subtitle">awesome projects</p>
+    <nav class="space-x-6 max-md:hidden">
+      <a href="#home" class="text-gray-300 hover:text-brandYellow font-light">Home</a>
+      <a href="#about" class="text-gray-300 hover:text-brandYellow font-light">About</a>
+      <a href="#work" class="text-gray-300 hover:text-brandYellow font-light">Works</a>
+      <a href="#contact" class="text-gray-300 hover:text-brandYellow font-light">Contact</a>
+    </nav>
+  </header>
 
-          <div class="categories">
-              <span>WEBDESIGN</span>
-              <span>LJUD & LJUS</span>
-              <span>3D</span>
-              <span>GRFISK DESIGN</span>
-          </div>
+  <!-- HERO -->
+  <section id="home" class="grid grid-cols-6 h-screen bg-black text-white max-md:grid-cols-1">
 
-          <div class="grid">
-              <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png">
-
-              <div class="grid-yellow">
-                  <div class="inner">
-                      <h3>DESIGN PROJECT</h3>
-                      <p>Lorem ipsum är inte slumpmässig text – det har rötter.</p>
-                  </div>
-              </div>
-          </div>
-
-          <button class="load-more">LOAD MORE</button>
-      </section>
-      <footer class="footer" id="contact">
-                <div class="footer-content">
-                    <h2>Kontakta mig</h2>
-
-                    <p>Telefon: +46 73 507 76 70</p>
-                    <p>LinkedIn: 
-                    <a href="https://www.linkedin.com/in/adrianlydén-b9847a29b" target="_blank">
-                    www.linkedin.com/in/adrianlydén-b9847a29b
-                    </a>
-                    </p>
-                    <p>Mejl:
-                    <a href="mailto:adrianlyden@gmail.com">adrianlyden@gmail.com</a> | 
-                    <a href="mailto:Adrian.Lyden@medieinstitutet.se">Adrian.Lyden@medieinstitutet.se</a>
-                    </p>
-                    <p>GitHub: 
-                    <a href="https://github.com/Addinato" target="_blank">
-                    github.com/Addinato
-                    </a>
-                    </p>
-                </div>
-
-      </footer>
+    <div class="absolute top-[80%] left-[35%] -translate-x-1/2 -translate-y-1/2 max-md:static max-md:translate-x-0 max-md:translate-y-0 max-md:p-10">
+      <h2 class="font-light tracking-[2px]">HEJ, MITT NAMN ÄR</h2>
+      <h1 class="text-5xl font-bold my-2 max-sm:text-3xl">ADRIAN LYDÉN</h1>
+      <button class="mt-5 bg-brandYellow px-6 py-3 rounded-xl font-semibold text-black">
+        JAG ÄR EN FULLSTACK UTVECKLARE & DESIGNER
+      </button>
     </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+
+    <div class="col-span-3 col-start-4 h-screen">
+      <img 
+        src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771426388/IMG_4215_0.5x_uxqyib.png"
+        class="w-full h-full object-cover"
+      />
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="grid grid-cols-2 gap-2 px-20 py-10 bg-white items-center max-md:grid-cols-1 max-md:px-10 max-md:text-center">
+
+    <div class="h-[90vh] rounded-2xl overflow-hidden">
+      <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324487/Bild_mig_s9lwi1.jpg"
+           class="w-full h-full object-contain" />
+    </div>
+
+    <div class="max-md:mt-5">
+      <h1 class="text-brandYellow font-bold text-xl tracking-[2px]">VEM ÄR JAG</h1>
+
+      <p class="mt-4 leading-relaxed">
+        Jag är en passionerad och nyfiken student med en stark känsla för programering och nya tekniker. Jag studerar för närvarande Webbutveckling inom E-handel på Medieinstitutet och söker LIA-plats där jag kan tillämpa mina kunskaper i bland annat HTML, CSS, Javascript och moderna ramnverk som Next samt arbeta med och utveckla backend.
+      </p>
+
+      <p class="mt-4 leading-relaxed">
+        Jag är en problemlösare som trivs med att arbeta både självständing och i team, och jag ser fram emot att utvecklas vidare inom branchen
+      </p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" class="text-center px-16 py-20">
+
+    <h1 class="text-3xl font-bold">
+      MY WORK <span class="text-brandYellow">⦿</span>
+    </h1>
+
+    <p class="text-gray-500 -mt-2">awesome projects</p>
+
+    <div class="mt-5 space-x-5">
+        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="all" >ALLA</span>
+
+        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="webb">WEBB</span>
+        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="lol">LJUD & LJUS</span>
+        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="3d">3D</span>
+        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="grafisk">GRAFISK DESIGN</span>
+    </div>
+
+    <!-- GRID -->
+    <div class="mt-10 grid grid-cols-3 gap-[1vw] max-md:grid-cols-2 max-sm:grid-cols-1">
+
+    <div class="h-[400px] flex items-center justify-center bg-brandYellow">
+    <div class="p-5 text-center">
+        <h3 class="font-bold">PROJECT</h3>
+        <p>Ett urval av projekt dokumenterade i bild och video, med fokus på tekniskt genomförande, precision och visuellt uttryck.</p>
+    </div>
+    </div>
+
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png" data-category="3d"
+            class="w-full h-full object-cover" />
+    </div>
+      
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771424319/GDk_sittning_mfrwty.jpg" data-category="grafisk" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324425/Kapet_Logga_i6b1qj.png" data-category="grafisk" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771490747/Thumbnail1_qjo8oi.png" data-category="3d" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324388/PB_paywall_pm7efj.png" data-category="webb" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324420/Fo%CC%88rdrink_med_TB_yyzgd3.png" data-category="grafisk" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771492726/Pixar_0.5x_jjlcgx.png" data-category="3d" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493304/Screenshot_2026-02-19_at_10.21.18_nsjpjj.png" data-category="lol" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493304/Screenshot_2026-02-19_at_10.20.16_q71vcx.png" data-category="lol" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493303/Screenshot_2026-02-19_at_10.22.48_ob2rdm.png" data-category="lol" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493302/Screenshot_2026-02-19_at_10.27.49_j59obi.png" data-category="lol" 
+            class="w-full h-full object-cover">
+    </div>
+    <div class="h-[400px]">
+        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493462/Screenshot_2026-02-19_at_10.30.28_mtyx1c.png" data-category="grafisk" 
+            class="w-full h-full object-cover">
+    </div>
+
+      <!-- Upprepa samma struktur för resterande bilder -->
+      
+    </div>
+
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="bg-[#1e1e1e] text-white text-center py-5 font-sans">
+
+    <h2 class="text-xl font-bold">Kontakta mig</h2>
+
+    <div class="grid grid-cols-6 gap-2 items-center max-md:grid-cols-1 mt-4">
+      <p class="my-2 text-base">Telefon: +46 73 507 76 70</p>
+
+      <p class="my-2 text-base">
+        LinkedIn:
+        <a href="#" class="text-yellow-600 hover:text-yellow-400 hover:underline">
+          www.linkedin.com/in/adrian-lydén-b9847a29b
+        </a>
+      </p>
+
+      <p class="my-2 text-base">
+        Mejl:
+        <a href="#" class="text-yellow-600 hover:text-yellow-400 hover:underline">
+          adrianlyden@gmail.com
+        </a>
+      </p>
+
+      <p class="my-2 text-base">
+        GitHub:
+        <a href="#" class="text-yellow-600 hover:text-yellow-400 hover:underline">
+          github.com/Addinato
+        </a>
+      </p>
+    </div>
+
+  </footer>
+
+</div>
+<script type="module" src="/src/filter.ts"></script>
+
+
+</body>
 </html>
