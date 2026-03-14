@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>portfolio</title>
 
-  <!-- Tailwind CDN (om du inte använder Vite/PostCSS) -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Poppins font -->
+  <link rel="stylesheet" href="./src/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
 
   <script>
@@ -27,180 +25,278 @@
   </script>
 </head>
 
-<body class="m-0 p-0 box-border bg-[#f2f2f2] text-[#222] font-poppins">
+<body class="m-0 p-0 box-border bg-[#0f0f0f] text-white font-poppins antialiased">
 
-<div id="app">
+  <div id="app">
 
-  <!-- HEADER -->
-  <header class="fixed top-0 w-full z-10 flex justify-between items-center px-20 py-6 bg-[#333] text-white max-md:px-5">
-    <div class="text-[22px] font-bold">PORTFOLIO.</div>
+    <!-- HEADER -->
+    <header class="fixed top-0 w-full z-50 px-20 py-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5 max-md:px-6">
 
-    <nav class="space-x-6 max-md:hidden">
-      <a href="#home" class="text-gray-300 hover:text-brandYellow font-light">Home</a>
-      <a href="#about" class="text-gray-300 hover:text-brandYellow font-light">About</a>
-      <a href="#work" class="text-gray-300 hover:text-brandYellow font-light">Works</a>
-      <a href="#contact" class="text-gray-300 hover:text-brandYellow font-light">Contact</a>
-    </nav>
-  </header>
+        <div class="text-xl font-semibold tracking-widest">
+          PORTFOLIO<span class="text-brandYellow">.</span>
+        </div>
 
-  <!-- HERO -->
-  <section id="home" class="grid grid-cols-6 h-screen bg-black text-white max-md:grid-cols-1">
+        <nav class="space-x-10 text-sm uppercase tracking-wider max-md:hidden">
+          <a href="#home" class="hover:text-brandYellow transition">Home</a>
+          <a href="#about" class="hover:text-brandYellow transition">About</a>
+          <a href="#work" class="hover:text-brandYellow transition">Works</a>
+          <a href="#contact" class="hover:text-brandYellow transition">Contact</a>
+        </nav>
 
-    <div class="absolute top-[80%] left-[35%] -translate-x-1/2 -translate-y-1/2 max-md:static max-md:translate-x-0 max-md:translate-y-0 max-md:p-10">
-      <h2 class="font-light tracking-[2px]">HEJ, MITT NAMN ÄR</h2>
-      <h1 class="text-5xl font-bold my-2 max-sm:text-3xl">ADRIAN LYDÉN</h1>
-      <button class="mt-5 bg-brandYellow px-6 py-3 rounded-xl font-semibold text-black">
-        JAG ÄR EN FULLSTACK UTVECKLARE & DESIGNER
-      </button>
-    </div>
+      </header>
 
-    <div class="col-span-3 col-start-4 h-screen">
-      <img 
-        src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771426388/IMG_4215_0.5x_uxqyib.png"
-        class="w-full h-full object-cover"
-      />
-    </div>
-  </section>
+    <!-- HERO -->
+    <section id="home"
+      class="relative grid grid-cols-6 h-screen bg-black text-white max-md:grid-cols-1 overflow-hidden">
 
-  <!-- ABOUT -->
-  <section id="about" class="grid grid-cols-2 gap-2 px-20 py-10 bg-white items-center max-md:grid-cols-1 max-md:px-10 max-md:text-center">
+      <div class="dot-overlay"></div>
 
-    <div class="h-[90vh] rounded-2xl overflow-hidden">
-      <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324487/Bild_mig_s9lwi1.jpg"
-           class="w-full h-full object-contain" />
-    </div>
+      <div class="absolute top-2/3 left-24 -translate-y-1/2 z-10 max-md:static max-md:p-10">
+        <p class="uppercase tracking-[6px] text-sm text-white/60">
+          FULLSTACK DEVELOPER
+        </p>
+        <p class="uppercase tracking-[6px] text-sm text-white/60">
+          DESIGNER
+        </p>
+        <p class="uppercase tracking-[6px] text-sm text-white/60">
+          LJUD & LJUS TEKNIKER
+        </p>      
+        <h1 class="text-6xl font-bold leading-tight mt-4 max-md:text-4xl">
+          Adrian <br>
+          <span class="text-brandYellow">Lydén</span>
+        </h1>
+          <p class="mt-6 max-w-md text-white/70 leading-relaxed">
+            Jag bygger moderna, skalbara och visuellt starka digitala upplevelser.
+          </p>
 
-    <div class="max-md:mt-5">
-      <h1 class="text-brandYellow font-bold text-xl tracking-[2px]">VEM ÄR JAG</h1>
+          <button class="mt-8 px-8 py-4 bg-brandYellow text-black font-semibold rounded-full hover:scale-105 transition duration-300">
+            Se mina projekt
+          </button>
+      </div>
 
-      <p class="mt-4 leading-relaxed">
-        Jag är en passionerad och nyfiken student med en stark känsla för programering och nya tekniker. Jag studerar för närvarande Webbutveckling inom E-handel på Medieinstitutet och söker LIA-plats där jag kan tillämpa mina kunskaper i bland annat HTML, CSS, Javascript och moderna ramnverk som Next samt arbeta med och utveckla backend.
-      </p>
+      <div class="col-span-3 col-start-4 h-screen relative z-[1]">
+        <img 
+          src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771426388/IMG_4215_0.5x_uxqyib.png"
+          class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
+          alt="Adrian Lydén"
+        />
+          <div class="absolute inset-0 bg-gradient-to-l from-black via-black/40 to-transparent"></div>
+      </div>
 
-      <p class="mt-4 leading-relaxed">
-        Jag är en problemlösare som trivs med att arbeta både självständing och i team, och jag ser fram emot att utvecklas vidare inom branchen
-      </p>
-    </div>
-  </section>
+    </section>
 
-  <!-- WORK -->
-  <section id="work" class="text-center px-16 py-20">
+    <!-- ABOUT -->
+    <section id="about" class="px-24 py-32 bg-[#111] max-md:px-8">
 
-    <h1 class="text-3xl font-bold">
-      MY WORK <span class="text-brandYellow">⦿</span>
-    </h1>
+      <div class="grid grid-cols-2 gap-20 items-center max-md:grid-cols-1">
 
-    <p class="text-gray-500 -mt-2">awesome projects</p>
+        <div class="rounded-3xl overflow-hidden shadow-2xl">
+          <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324487/Bild_mig_s9lwi1.jpg"
+              class="w-full h-full object-cover hover:scale-105 transition duration-700" />
+        </div>
 
-    <div class="mt-5 space-x-5">
-        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="all" >ALLA</span>
+        <div>
+          <p class="uppercase text-brandYellow tracking-[4px] text-sm">
+            About me
+          </p>
 
-        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="webb">WEBB</span>
-        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="lol">LJUD & LJUS</span>
-        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="3d">3D</span>
-        <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="grafisk">GRAFISK DESIGN</span>
-    </div>
+          <p class="text-xl font-bold mt-4">
+            Jag är en passionerad och nyfiken student med en stark känsla för programering och nya tekniker. Jag studerar för närvarande Webbutveckling inom E-handel på Medieinstitutet och söker LIA-plats där jag kan tillämpa mina kunskaper i bland annat HTML, CSS, Javascript och moderna ramnverk som Next samt arbeta med och utveckla backend.
+          </p>
 
-    <!-- GRID -->
-    <div class="mt-10 grid grid-cols-3 gap-[1vw] max-md:grid-cols-2 max-sm:grid-cols-1">
+          <p class="mt-6 text-white/70 leading-relaxed">
+            Jag är en problemlösare som trivs med att arbeta både självständing och i team, och jag ser fram emot att utvecklas vidare inom branchen
+          </p>
+        </div>
 
-    <div class="h-[400px] flex items-center justify-center bg-brandYellow">
-    <div class="p-5 text-center">
-        <h3 class="font-bold">PROJECT</h3>
-        <p>Ett urval av projekt dokumenterade i bild och video, med fokus på tekniskt genomförande, precision och visuellt uttryck.</p>
-    </div>
-    </div>
+      </div>
 
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png" data-category="3d"
-            class="w-full h-full object-cover" />
-    </div>
-      
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771424319/GDk_sittning_mfrwty.jpg" data-category="grafisk" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324425/Kapet_Logga_i6b1qj.png" data-category="grafisk" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771490747/Thumbnail1_qjo8oi.png" data-category="3d" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324388/PB_paywall_pm7efj.png" data-category="webb" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324420/Fo%CC%88rdrink_med_TB_yyzgd3.png" data-category="grafisk" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771492726/Pixar_0.5x_jjlcgx.png" data-category="3d" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493304/Screenshot_2026-02-19_at_10.21.18_nsjpjj.png" data-category="lol" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493304/Screenshot_2026-02-19_at_10.20.16_q71vcx.png" data-category="lol" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493303/Screenshot_2026-02-19_at_10.22.48_ob2rdm.png" data-category="lol" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493302/Screenshot_2026-02-19_at_10.27.49_j59obi.png" data-category="lol" 
-            class="w-full h-full object-cover">
-    </div>
-    <div class="h-[400px]">
-        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493462/Screenshot_2026-02-19_at_10.30.28_mtyx1c.png" data-category="grafisk" 
-            class="w-full h-full object-cover">
-    </div>
+    </section>
 
-      <!-- Upprepa samma struktur för resterande bilder -->
-      
-    </div>
+    <!-- WORK -->
+    <section id="work" class="px-24 py-32 bg-white max-md:px-8">
+
+      <div class="flex justify-between items-end mb-16 max-md:flex-col max-md:items-start">
+        <div>
+          <p class="uppercase text-black/70 tracking-[4px] text-sm">Portfolio</p>
+          <h2 class="text-4xl font-bold mt-2 text-black">Selected Work</h2>
+        </div>
+      </div>
+
+      <div class="mt-5 space-x-5 text-black/70">
+          <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="all" >ALLA</span>
+
+          <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="webb">WEBB</span>
+          <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="lol">LJUD & LJUS</span>
+          <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="3d">3D</span>
+          <span class="cursor-pointer pb-1 hover:text-brandYellow" data-filter="grafisk">GRAFISK DESIGN</span>
+      </div>
+
+      <!-- GRID -->
+      <div class="mt-10 grid grid-cols-3 gap-[1vw] max-md:grid-cols-2 max-sm:grid-cols-1" id="projectGrid">
+
+        <div class="group relative overflow-hidden rounded-2xl flex items-center justify-center bg-brandYellow" data-category="all">
+          <div class="p-5 text-center">
+              <h3 class="font-bold text-black">PROJECT</h3>
+              <p class="text-black">Ett urval av projekt dokumenterade i bild och video, med fokus på tekniskt genomförande, precision och visuellt uttryck.</p>
+          </div>
+        </div>
+
+        <div class="group relative overflow-hidden rounded-2xl" data-category="3d">
+          <a href="projects/drake.html">  
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png" 
+                  class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700" />
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+          
+        <div class="group relative overflow-hidden rounded-2xl" data-category="grafisk">
+          <a href="projects/PR.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771424319/GDk_sittning_mfrwty.jpg"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="grafisk">
+          <a href="projects/ljudTekniker.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1773521007/Screenshot_2026-03-14_at_21.43.02_gwrqdw.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="3d">
+          <a href="projects/intro-animation.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771490747/Thumbnail1_qjo8oi.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="webb">
+          <a href="projects/paywall.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771324388/PB_paywall_pm7efj.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="3d">
+          <a href="projects/Koncept-poster.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771492726/Pixar_0.5x_jjlcgx.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="lol">
+          <a href="projects/DMX-programering.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493304/Screenshot_2026-02-19_at_10.21.18_nsjpjj.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="lol">
+          <a href="projects/MTcelebration.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493304/Screenshot_2026-02-19_at_10.20.16_q71vcx.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="webb">
+          <a href="projects/wordpressSida.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1773521690/Screenshot_2026-03-14_at_21.54.22_geefw3.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="lol">
+          <a href="projects/boilerroom.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493303/Screenshot_2026-02-19_at_10.22.48_ob2rdm.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="lol">
+          <a href="projects/laserdome.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493302/Screenshot_2026-02-19_at_10.27.49_j59obi.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="group relative overflow-hidden rounded-2xl" data-category="grafisk">
+          <a href="projects/aftereffects.html">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771493462/Screenshot_2026-02-19_at_10.30.28_mtyx1c.png"  
+                class="w-full h-[400px] object-cover group-hover:scale-110 transition duration-700">
+            <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <p class="text-white text-lg font-semibold tracking-wide">
+                View Project
+              </p>
+            </div>
+          </a>
+        </div>
+
+      </div>
 
 
-  </section>
+    </section>
 
-  <!-- FOOTER -->
-  <footer id="contact" class="bg-[#1e1e1e] text-white text-center py-5 font-sans">
+    <!-- FOOTER -->
+    <footer id="contact" class="bg-[#0a0a0a] border-t border-white/5 py-16 text-center">
 
-    <h2 class="text-xl font-bold">Kontakta mig</h2>
+      <h2 class="text-2xl font-bold mb-6">
+        Låt oss skapa något tillsammans
+      </h2>
 
-    <div class="grid grid-cols-6 gap-2 items-center max-md:grid-cols-1 mt-4">
-      <p class="my-2 text-base">Telefon: +46 73 507 76 70</p>
+      <div class="space-y-3 text-white/60">
+        <p>+46 73 507 76 70</p>
+        <p>adrianlyden@gmail.com</p>
+        <p>github.com/Addinato</p>
+      </div>
 
-      <p class="my-2 text-base">
-        LinkedIn:
-        <a href="#" class="text-yellow-600 hover:text-yellow-400 hover:underline">
-          www.linkedin.com/in/adrian-lydén-b9847a29b
-        </a>
-      </p>
+    </footer>
 
-      <p class="my-2 text-base">
-        Mejl:
-        <a href="#" class="text-yellow-600 hover:text-yellow-400 hover:underline">
-          adrianlyden@gmail.com
-        </a>
-      </p>
-
-      <p class="my-2 text-base">
-        GitHub:
-        <a href="#" class="text-yellow-600 hover:text-yellow-400 hover:underline">
-          github.com/Addinato
-        </a>
-      </p>
-    </div>
-
-  </footer>
-
-</div>
+  </div>
 <script type="module" src="/src/filter.ts"></script>
 
 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon</title>
+
+    <!-- Tailwind CDN (om du inte använder Vite/PostCSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            fontFamily: {
+                poppins: ['Poppins', 'sans-serif']
+            },
+            colors: {
+                brandYellow: '#f7e41c'
+            }
+            }
+        }
+        }
+    </script>
+</head>
+<body class="m-0 p-0 box-border bg-white text-black font-poppins antialiased">
+    <header class="fixed top-0 w-full z-50 px-20 py-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5 max-md:px-6 text-white">
+
+        <div class="text-xl font-semibold tracking-widest">
+            <a href="/">PORTFOLIO<span class="text-brandYellow">.</span></a>
+        </div>
+
+        <nav class="space-x-10 text-sm uppercase tracking-wider max-md:hidden">
+            <a href="/" class="hover:text-brandYellow transition">Back</a>
+        </nav>
+
+    </header>
+
+    <section class="pt-40 pb-24 px-24 max-md:px-8">
+
+        <p class="mt-8 px-8 py-4 bg-brandYellow text-black font-semibold rounded-full transition duration-300 inline-block ">
+            Case Study
+        </p>
+
+        <h1 class="text-5xl leading-tight font-bold mt-4 max-md:text-3xl">
+            3D-projekt <br> Drake & Slott i 3D miljö
+        </h1>
+
+        <p class="mt-6 max-w-3xl text-black/70 leading-relaxed">
+            I ett grupprojekt inom 3D-grafik på universitet arbetade jag med att designa och skapa en drake samt utveckla en realistisk eldsimulering i Blender. Projektets mål var att kombinera modellering och fysikbaserade simuleringar för att skapa en dynamisk scen där draken interagerar med ett slott och eld.
+            <br>
+            Min huvudsakliga roll i projektet var att modellera och konfigurera eldsimuleringen. Arbetet fokuserade på att hitta en balans mellan visuell detaljrikedom och en effektiv arbetsprocess som fungerade inom projektets gemensamma pipeline.
+        </p>
+
+    </section>
+
+    <section class="px-24 max-md:px-8">
+
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png"
+                class="w-full h-[70vh] object-contain" />
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"></div>
+        </div>
+
+    </section>
+
+    <section class="px-24 py-24 max-md:px-8">
+
+        <div class="grid grid-cols-3 gap-20 max-md:grid-cols-1">
+
+            <div>
+            <p class="text-white/50 uppercase text-sm tracking-widest">Roll</p>
+            <p class="mt-2 font-semibold">3D designer</p>
+            </div>
+
+            <div>
+            <p class="text-white/50 uppercase text-sm tracking-widest">Verktyg</p>
+            <p class="mt-2 font-semibold">Blender, Substance Painter</p>
+            </div>
+
+            <div>
+            <p class="text-white/50 uppercase text-sm tracking-widest">År</p>
+            <p class="mt-2 font-semibold">2024</p>
+            </div>
+
+        </div>
+
+    </section>
+    
+    <!-- <section class="px-24 pb-32 max-md:px-8">
+        <h2 class="text-3xl font-bold mb-12">
+            Projektgalleri
+        </h2>
+        <div class="relative w-full ">
+    
+            <div class="relative">
+                <div class="overflow-hidden rounded-3xl shadow-2xl bg-[#111]">
+
+                    <div id="carousel" class="flex transition-transform duration-700 ease-out">
+                        
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                            <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1765457319/andra_rendering_ajkddr.png"
+                                class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                                alt="Bild 1">
+                        </div>
+
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1772659857/GDK_sittning_ma%CC%88rke_0.5x_ttsoxy.jpg"
+                            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                            alt="Bild 2">
+                        </div>
+
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1772659857/GDK-sittningmenu_0.5x_pqhsyk.jpg"
+                            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                            alt="Bild 3">
+                        </div>
+
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1772660501/GDK_vepa_z5i85n.jpg"
+                            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                            alt="Bild 4">
+                        </div>
+
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771425087/GDK-vepa_med_spons_d9flfm.png"
+                            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                            alt="Bild 5">
+                        </div>
+
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771424980/GDk_sittning_meny-1_0.5x_ujq5mq.png"
+                            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                            alt="Bild 6">
+                        </div>
+
+                        <div class="min-w-full flex items-center justify-center h-[600px] p-10">
+                        <img src="https://res.cloudinary.com/dgcqgxkla/image/upload/v1771424978/GDk_sittning_meny-2_0.5x_kg8waj.png"
+                            class="max-h-full max-w-full object-contain hover:scale-105 transition duration-700"
+                            alt="Bild 7">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <button onclick="prevSlide()"
+            class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md 
+            border border-white/10 text-white px-5 py-3 rounded-full hover:bg-brandYellow hover:text-black transition">
+            ❮
+            </button>
+
+            <button onclick="nextSlide()"
+            class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md 
+            border border-white/10 text-white px-5 py-3 rounded-full hover:bg-brandYellow hover:text-black transition">
+            ❯
+            </button>
+
+        </div>
+    </section> -->
+
+<script>
+    const carousel = document.getElementById("carousel");
+    const slides = carousel.children;
+    let index = 0;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+  </script>
+<script type="module" src="/src/filter.ts"></script>
+</body>
+</html>

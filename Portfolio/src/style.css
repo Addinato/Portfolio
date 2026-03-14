@@ -1,4 +1,23 @@
 @import "tailwindcss";
+
+.dot-overlay {
+  position: absolute;
+  inset: 0;
+  background: #000000;
+  filter: contrast(7);
+  pointer-events: none;
+  z-index: 1;
+
+--mask: linear-gradient(to bottom, black, transparent);}
+
+.dot-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(rgb(206, 206, 0), transparent) 0 0/1em 1em space;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
 /* 
 * {
   margin: 0;
