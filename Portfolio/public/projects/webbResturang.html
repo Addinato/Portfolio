@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragon</title>
+
+    <!-- Tailwind CDN (om du inte använder Vite/PostCSS) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Poppins font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            fontFamily: {
+                poppins: ['Poppins', 'sans-serif']
+            },
+            colors: {
+                brandYellow: '#f7e41c'
+            }
+            }
+        }
+        }
+    </script>
+</head>
+<body class="m-0 p-0 box-border bg-white text-black font-poppins antialiased">
+    <header class="fixed top-0 w-full z-50 px-20 py-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5 max-md:px-6 text-white">
+
+        <div class="text-xl font-semibold tracking-widest">
+            <a href="/">PORTFOLIO<span class="text-brandYellow">.</span></a>
+        </div>
+
+        <nav class="space-x-10 text-sm uppercase tracking-wider ">
+            <a href="/" class="hover:text-brandYellow transition">Back</a>
+        </nav>
+
+    </header>
+
+    <section class="pt-40 pb-24 px-24 max-md:px-8">
+
+        <p class="mt-8 px-8 py-4 bg-brandYellow text-black font-semibold rounded-full transition duration-300 inline-block ">
+            Case Study  
+        </p>
+
+        <h1 class="text-5xl leading-tight font-bold mt-4 max-md:text-3xl">
+            Restaurangprojekt <br> Bokningssystem i React
+        </h1>
+
+        <p class="mt-6 max-w-3xl text-black/70 leading-relaxed">
+            I detta projekt arbetade jag tillsammans med två andra studenter för att utveckla en komplett webbapplikation för en restaurang. Syftet med uppgiften var att kombinera design, frontendutveckling och API-integration, samtidigt som vi tränade på samarbete och kommunikation i grupp.
+
+            Den centrala delen av projektet var bokningssystemet. Användaren kan ange antal personer och önskat datum för att söka efter lediga tider. Genom API-anrop hämtas tillgängliga sittningar (18:00 och 21:00), och resultatet presenteras på ett tydligt sätt. När en tid väljs får användaren fylla i sina kontaktuppgifter, och bokningen sparas i databasen via ytterligare ett API-anrop. Formulären innehåller validering och felhantering för att säkerställa korrekt inmatning.
+            <br>
+            Frontend-delen byggdes med React och TypeScript, vilket bidrog till en mer strukturerad och typad kodbas. Vi lade stor vikt vid kodkvalitet, komponentstruktur och en tydlig filorganisation. Projektet versionshanterades med Git, där alla gruppmedlemmars bidrag synliggjordes genom commits. För projektplanering använde vi Trello för att fördela uppgifter och följa arbetsprocessen.
+
+        </p>
+
+    </section>
+
+    <section class="px-24 max-md:px-8">
+
+        <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+            <video src="https://res.cloudinary.com/dgcqgxkla/video/upload/v1775142361/Screen_Recording_2026-04-02_at_17.01.17_jupaee.mov"
+                class="w-full h-[70vh] object-contain" controls/>
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/5 to-transparent"></div>
+        </div>
+
+    </section>
+
+    <section class="px-24 py-24 max-md:px-8">
+
+        <div class="grid grid-cols-3 gap-20 max-md:grid-cols-1">
+
+            <div>
+            <p class="text-white/50 uppercase text-sm tracking-widest">Roll</p>
+            <p class="mt-2 font-semibold">Webbutvecklare & API-utvecklare</p>
+            </div>
+
+            <div>
+            <p class="text-white/50 uppercase text-sm tracking-widest">Verktyg</p>
+            <p class="mt-2 font-semibold">React, TypeScript, Node.js</p>
+            </div>
+
+            <div>
+            <p class="text-white/50 uppercase text-sm tracking-widest">År</p>
+            <p class="mt-2 font-semibold">2025</p>
+            </div>
+
+        </div>
+
+    </section>
+    
+    
+
+<script>
+    const carousel = document.getElementById("carousel");
+    const slides = carousel.children;
+    let index = 0;
+
+    function updateCarousel() {
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+  </script>
+<script type="module" src="/src/filter.ts"></script>
+</body>
+</html>
