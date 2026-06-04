@@ -9,6 +9,7 @@ const defaultConfig: ProjectHeaderConfig = {
 };
 
 function setHeader(headerEl: HTMLElement, config: ProjectHeaderConfig) {
+
   headerEl.className =
     'fixed top-0 w-full z-50 px-20 py-6 flex justify-between items-center backdrop-blur-md bg-black/40 border-b border-white/5 max-md:px-6 text-white';
 
@@ -25,33 +26,30 @@ function setHeader(headerEl: HTMLElement, config: ProjectHeaderConfig) {
   `;
 }
 
+function setFooter(footerEl: HTMLElement) {
+  footerEl.className =
+    'bg-[#0a0a0a] border-t border-white/5 py-16 text-center';
+
+  footerEl.innerHTML = `
+    <h2 class="text-2xl font-bold mb-6">Kontakta mig</h2>
+
+    <div class="space-y-3 text-white/60">
+      <p>adrianlyden@gmail.com</p>
+      <p>
+        <a href="https://github.com/Addinato" target="_blank" rel="noopener noreferrer">Github</a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/adrian-lydén-b9847a29b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </p>
+    </div>
+  `;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const headerEl = document.querySelector<HTMLElement>('[data-project-header]');
   if (headerEl) setHeader(headerEl, defaultConfig);
 
-  // Footer-komponent
-  const footerEl =
-    document.querySelector<HTMLElement>('[data-project-footer]') ??
-    document.querySelector<HTMLElement>('footer');
-
-  if (footerEl) {
-    footerEl.className =
-      'bg-[#0a0a0a] border-t border-white/5 py-16 text-center';
-
-    footerEl.innerHTML = `
-      <h2 class="text-2xl font-bold mb-6">Kontakta mig</h2>
-
-      <div class="space-y-3 text-white/60">
-        <p>adrianlyden@gmail.com</p>
-        <p>
-          <a href="https://github.com/Addinato" target="_blank" rel="noopener noreferrer">Github</a>
-        </p>
-        <p>
-          <a href="https://www.linkedin.com/in/adrian-lydén-b9847a29b" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </p>
-      </div>
-    `;
-  }
+  const footerEl = document.querySelector<HTMLElement>('[data-project-footer]');
+  if (footerEl) setFooter(footerEl);
 });
-
 

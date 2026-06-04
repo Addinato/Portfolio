@@ -24,7 +24,17 @@
 </head>
 
 <body class="m-0 p-0 box-border bg-white text-black font-poppins antialiased">
-  <header data-project-header></header>
+  <header data-project-header>
+
+        <div class="text-xl font-semibold tracking-widest">
+            <a href="/">PORTFOLIO<span class="text-brandYellow">.</span></a>
+        </div>
+
+        <nav class="space-x-10 text-sm uppercase tracking-wider ">
+            <a href="/" class="hover:text-brandYellow transition">Back</a>
+        </nav>
+
+  </header>
   <main data-project-page class="min-h-screen">
 
     <section data-project-hero class="pt-40 pb-24 px-24 max-md:px-8">
@@ -78,36 +88,7 @@
       </div>
     </section>
 
-    <!-- Galerie (valfritt / kan återanvändas med samma struktur) -->
-    <section class="px-24 pb-32 max-md:px-8" data-project-gallery>
-      <h2 class="text-3xl font-bold mb-12">Projektgalleri</h2>
-
-      <div class="relative w-full">
-        <div class="relative">
-          <div class="overflow-hidden rounded-3xl shadow-2xl bg-[#111]">
-            <div id="carousel" class="flex transition-transform duration-700 ease-out">
-              <!-- Fylls per projekt -->
-            </div>
-          </div>
-        </div>
-
-        <button
-          type="button"
-          onclick="prevSlide()"
-          class="absolute left-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md border border-white/10 text-white px-5 py-3 rounded-full hover:bg-brandYellow hover:text-black transition"
-        >
-          ❮
-        </button>
-
-        <button
-          type="button"
-          onclick="nextSlide()"
-          class="absolute right-6 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-md border border-white/10 text-white px-5 py-3 rounded-full hover:bg-brandYellow hover:text-black transition"
-        >
-          ❯
-        </button>
-      </div>
-    </section>
+    
   </main>
 
   <script>
